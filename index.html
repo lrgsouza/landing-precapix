@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precapix - Venda seu Precatório</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Adicione aqui o @font-face para a fonte Carbona */
+        @font-face {
+            font-family: 'Carbona';
+            /* Substitua 'path/to/your/font.otf' pelo caminho correto da sua fonte */
+            /* Exemplo: src: url('/fonts/Carbona-Black.otf') format('opentype'); */
+            src: url('/fonts/Carbona-Black.otf') format('opentype');
+        }
+
+        body {
+            font-family: 'Carbona', sans-serif;
+            background-color: #F3F4F6;
+        }
+        
+        .font-carbona {
+            font-family: 'Carbona', sans-serif;
+        }
+
+        .logo-header {
+            height: 6rem; /* Ajustei a altura para um valor mais comum */
+        }
+        
+        /* Estilos para a transição do carrossel */
+        .carousel-item {
+            transition: opacity 1s ease-in-out;
+        }
+        
+        /* Estilos para a seção expansível */
+        #expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Cabeçalho -->
+    <header class="bg-[#00a99d] shadow-lg z-20 relative">
+        <nav class="container mx-auto px-6 py-1 flex justify-between items-center">
+            <div>
+                <!-- Substitua pelo caminho da sua logotipo -->
+                <img src="img/Logotipo/Branco/logo_precapix_branco.png" alt="Logotipo Precapix" class="logo-header" >
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-white font-semibold">
+                <a href="#porque-escolher" class="hover:text-gray-200 transition duration-300">Por que Vender?</a>
+                <span class="text-gray-300 opacity-50">|</span>
+                <a href="#como-funciona" class="hover:text-gray-200 transition duration-300">Como Funciona?</a>
+                <span class="text-gray-300 opacity-50">|</span>
+                <a href="#depoimentos" class="hover:text-gray-200 transition duration-300">Depoimentos</a>
+                <span class="text-gray-300 opacity-50">|</span>
+                <a href="#about" class="hover:text-gray-200 transition duration-300">Quem Somos</a>
+            </div>
+            <div>
+                <a href="https://wa.me/5500000000000" class="bg-[#c4d63b] text-black font-bold py-2 px-6 rounded-md hover:bg-opacity-90 transition duration-300 text-sm">Vender meu precatório</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Principal (Carrossel Hero) -->
+    <main class="relative w-full overflow-hidden" style="height: 500px;">
+        <!-- Slides Container -->
+        <div id="carousel-container" class="relative h-full">
+            
+            <!-- Slide 1: Cor Sólida -->
+            <div class="carousel-item absolute inset-0 opacity-100 z-10 bg-[#c4d63b] flex items-center">
+                <div class="container mx-auto px-6 flex items-center justify-between">
+                    <div class="text-left text-black max-w-2xl">
+                        <h1 class="font-carbona text-5xl font-black mb-4 leading-tight">Receba seu precatório na velocidade de um pix</h1>
+                        <p class="mb-6">A PRECAPIX compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
+                        <a href="https://wa.me/5500000000000" target="_blank" class="bg-[#00a99d] text-white font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300">Quero Vender Meu Precatório Agora!</a>
+                        <p class="text-sm mt-4">Fale com um Especialista no WhatsApp!</p>
+                    </div>
+                    <div class="w-10 hidden md:flex justify-center items-center max-h-[1500px]">
+                        <!-- Substitua pelo caminho do seu logo (SVG ou PNG) -->
+                        <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Logo Precapix Grande" class="absolute bottom-50 max-h-[1500px] md:max-h-[1500pxpx] z-50 h-1500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Imagem 1 -->
+            <div class="carousel-item absolute inset-0 opacity-0 z-0">
+                <img src="img/Banner/banner_001.png" alt="Receba seu precatório" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div class="container mx-auto px-6 h-full flex items-center justify-between relative z-10">
+                    <div class="text-left text-white max-w-2xl">
+                        <h1 class="font-carbona text-5xl font-black mb-4 leading-tight">Receba seu precatório na velocidade de um pix</h1>
+                        <p class="mb-6">A PRECAPIX compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
+                        <a href="https://wa.me/5500000000000" target="_blank" class="bg-[#c4d63b] text-black font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300">Quero Vender Meu Precatório Agora!</a>
+                        <p class="text-sm mt-4">Fale com um Especialista no WhatsApp!</p>
+                    </div>
+                    <div class="w-10 hidden md:flex justify-center items-center max-h-[1500px]">
+                        <!-- Substitua pelo caminho do seu logo (SVG ou PNG) -->
+                        <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Logo Precapix Grande" class="absolute bottom-50 max-h-[1500px] md:max-h-[1500pxpx] z-50 h-1500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Imagem 2 -->
+            <div class="carousel-item absolute inset-0 opacity-0 z-0">
+                <img src="img/Banner/banner_002.png" alt="Venda seu precatório" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div class="container mx-auto px-6 h-full flex items-center justify-between relative z-10">
+                    <div class="text-left text-white max-w-2xl">
+                        <h1 class="font-carbona text-5xl font-black mb-4 leading-tight">Receba seu precatório na velocidade de um pix</h1>
+                        <p class="mb-6">A PRECAPIX compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
+                        <a href="https://wa.me/5500000000000" target="_blank" class="bg-[#c4d63b] text-black font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300">Quero Vender Meu Precatório Agora!</a>
+                        <p class="text-sm mt-4">Fale com um Especialista no WhatsApp!</p>
+                    </div>
+                    <div class="w-10 hidden md:flex justify-center items-center max-h-[1500px]">
+                        <!-- Substitua pelo caminho do seu logo (SVG ou PNG) -->
+                        <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Logo Precapix Grande" class="absolute bottom-50 max-h-[1500px] md:max-h-[1500pxpx] z-50 h-1500">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegação do Carrossel -->
+        <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-20 text-white p-2 rounded-full hover:bg-opacity-50 transition z-20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-20 text-white p-2 rounded-full hover:bg-opacity-50 transition z-20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </main>
+
+    <!-- Seção Como Funciona -->
+    <section id="como-funciona" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-carbona text-3xl font-bold text-gray-800 mb-16">Como Funciona a Venda do Seu Precatório?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                
+                <!-- Passo 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <svg class="w-16 h-16 text-[#00a99d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    </div>
+                    <span class="bg-[#5c4b8c] text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Passo 1</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Envio de Dados</h3>
+                    <p class="text-gray-600 px-4">Preencha nosso formulário com as informações do seu precatório.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <svg class="w-16 h-16 text-[#00a99d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <span class="bg-[#5c4b8c] text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Passo 2</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Análise e Proposta</h3>
+                    <p class="text-gray-600 px-4">Nossa equipe jurídica analisa o caso e envia uma proposta personalizada.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <svg class="w-16 h-16 text-[#00a99d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    </div>
+                    <span class="bg-[#5c4b8c] text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Passo 3</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Assinatura do Contrato</h3>
+                    <p class="text-gray-600 px-4">Após aprovação, enviamos o contrato digital ou presencial para assinatura.</p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <svg class="w-16 h-16 text-[#00a99d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"></path></svg>
+                    </div>
+                    <span class="bg-[#5c4b8c] text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Passo 4</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pagamento Imediato</h3>
+                    <p class="text-gray-600 px-4">Dinheiro na sua conta em até 24 horas após a formalização (via pix ou transferência).</p>
+                </div>
+
+            </div>
+            <div class="mt-16 flex flex-col items-center space-y-4">
+                <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Logo X" class="h-20 w-20">
+                <a href="https://wa.me/5500000000000" target="_blank" class="inline-flex items-center text-gray-700 font-semibold hover:text-blue-600 transition duration-300">
+                    
+                    Fale agora com um especialista via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Por que Escolher a Precapix? -->
+    <section id="porque-escolher" class="py-20 bg-[#00a99d]">
+        <div class="container mx-auto px-6 text-center text-white">
+            <h2 class="font-carbona text-4xl font-bold mb-16">Por que escolher a PRECAPIX?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+                
+                <!-- Item 1 -->
+                <div class="flex flex-col items-center">
+                    <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Ícone Agilidade" class="h-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">Agilidade no pagamento</h3>
+                    <p class="text-sm">Receba em até 24 horas após a assinatura</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col items-center">
+                    <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Ícone Segurança" class="h-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">Segurança e Transparência</h3>
+                    <p class="text-sm">Contrato com validade jurídica, elaborado por especialistas</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col items-center">
+                    <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Ícone Liquidez" class="h-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">Liquidez Imediata</h3>
+                    <p class="text-sm">Transforme um crédito parado em oportunidade real</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex flex-col items-center">
+                    <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Ícone Atendimento" class="h-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">Atendimento Humanizado</h3>
+                    <p class="text-sm">Nossa equipe acompanha você em todas as etapas.</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="flex flex-col items-center">
+                    <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Ícone Custo" class="h-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">Sem custo para o cliente</h3>
+                    <p class="text-sm">Cuidamos de toda a parte cartorária e documental</p>
+                </div>
+            </div>
+            <div class="mt-16">
+                <a href="https://wa.me/5500000000000" class="text-black font-bold hover:underline">
+                    Quero Conversar com um Especialista
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Seção Quem Somos -->
+    <section id="about" class="bg-[#c4d63b] py-20 overflow-hidden relative">
+        <!-- Elementos decorativos -->
+        <div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/4">
+            <!-- <div class="w-96 h-96 bg-black transform rotate-45"></div> -->
+            <img src="img/Logomarca/Preto/logo_preto.png" alt="Logo Precipix" class="h-55">
+        </div>
+        <div class="absolute top-5 left-16 p-12 z-10">
+            <img src="img/Logotipo/Branco/logo_precapix_branco.png" alt="Logo Precipix" class="h-16">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 text-white">
+                    <h2 class="font-carbona text-5xl font-black mb-2">Quem somos?</h2>
+                    <button id="expand-button" class="text-lg font-semibold flex items-center transition-transform duration-300">
+                        Descubra mais!
+                        <svg id="arrow-icon" class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </div>
+                <div class="w-full md:w-1/2 mt-8 md:mt-0">
+                    <img src="https://placehold.co/600x400/FFFFFF/000000?text=foto+da+equipe" alt="Foto da Equipe" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+            <div id="expandable-content">
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <div class="md:col-span-1 space-y-8">
+                        <img src="https://placehold.co/400x300/FFFFFF/000000?text=foto+da+equipe" alt="Foto da Equipe 2" class="rounded-lg shadow-xl">
+                        <img src="https://placehold.co/400x300/FFFFFF/000000?text=foto+da+equipe" alt="Foto da Equipe 3" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="md:col-span-2 text-black text-3xl">
+                        <p class="mb-6">A Precapix é uma empresa dedicada à compra de precatórios federais, estaduais e municipais, criada com o propósito de tornar esse processo mais humano, seguro e justo. Seus fundadores perceberam a falta de um atendimento personalizado no setor e decidiram construir uma empresa que prioriza a escuta, a ética e a transparência.</p>
+                        <p class="mb-6">Com uma equipe especializada, a Precapix avalia cada caso com sensibilidade e conhecimento técnico, oferecendo propostas justas que respeitam as necessidades individuais dos clientes. A empresa entende que vender um precatório é uma decisão importante e, por isso, acompanha de perto todo o processo, oferecendo orientação clara e soluções sob medida.</p>
+                        <p class="mb-6">Mais do que buscar o melhor valor, a Precapix se dedica a oferecer a melhor experiência, baseada em confiança, agilidade e respeito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lógica do Carrossel
+            const slides = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                if(slides.length === 0) return;
+                if (index >= slides.length) currentSlide = 0;
+                else if (index < 0) currentSlide = slides.length - 1;
+                else currentSlide = index;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('opacity-100', i === currentSlide);
+                    slide.classList.toggle('z-10', i === currentSlide);
+                    slide.classList.toggle('opacity-0', i !== currentSlide);
+                    slide.classList.toggle('z-0', i !== currentSlide);
+                });
+            }
+
+            function nextSlide() { showSlide(currentSlide + 1); }
+            function prevSlide() { showSlide(currentSlide - 1); }
+
+            function startCarousel() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function resetCarousel() {
+                clearInterval(slideInterval);
+                startCarousel();
+            }
+
+            if(nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => { nextSlide(); resetCarousel(); });
+                prevBtn.addEventListener('click', () => { prevSlide(); resetCarousel(); });
+            }
+            
+            startCarousel();
+
+            // Lógica da Seção Expansível
+            const expandButton = document.getElementById('expand-button');
+            const expandableContent = document.getElementById('expandable-content');
+            const arrowIcon = document.getElementById('arrow-icon');
+
+            if(expandButton && expandableContent && arrowIcon) {
+                expandButton.addEventListener('click', () => {
+                    const isExpanded = expandableContent.style.maxHeight && expandableContent.style.maxHeight !== '0px';
+                    if (isExpanded) {
+                        expandableContent.style.maxHeight = '0px';
+                        arrowIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        expandableContent.style.maxHeight = expandableContent.scrollHeight + 'px';
+                        arrowIcon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
