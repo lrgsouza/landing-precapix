@@ -47,6 +47,12 @@
             overflow: hidden;
             transition: max-height 0.7s ease-in-out;
         }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -200,7 +206,7 @@
     <!-- Seção Por que Escolher a Precapix? -->
     <section id="porque-escolher" class="py-20 bg-[#00a99d]">
         <div class="container mx-auto px-6 text-center text-white">
-            <h2 class="font-carbona text-4xl font-bold mb-16">Por que escolher a PRECAPIX?</h2>
+            <h2 class="font-carbona text-4xl font-bold mb-16">Por que escolher a PRECIPIX?</h2>
             <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
                 
                 <!-- Item 1 -->
@@ -270,7 +276,7 @@
                     <img src="https://placehold.co/600x400/FFFFFF/000000?text=foto+da+equipe" alt="Foto da Equipe" class="rounded-lg shadow-xl">
                 </div>
             </div>
-            <div id="expandable-content">
+            <div id="expandable-content" class="expandable-content">
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                     <div class="md:col-span-1 space-y-8">
                         <img src="https://placehold.co/400x300/FFFFFF/000000?text=foto+da+equipe" alt="Foto da Equipe 2" class="rounded-lg shadow-xl">
@@ -318,6 +324,76 @@
                     <p class="italic mb-4">“fase do cliente aqui nessas aspas, onde ele cita algo”</p>
                     <p class="font-bold">Nome do Cliente</p>
                     <p class="text-sm text-gray-400">Cidade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção Dúvidas Frequentes -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="flex justify-center items-center mb-4">
+                    <svg class="w-10 h-10 text-[#00a99d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.546-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h2 class="font-carbona text-4xl font-bold text-gray-800">Dúvidas Frequentes</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-300 py-2">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800">
+                        <span>1 - Como funciona a antecipação de precatórios?</span>
+                        <svg class="faq-arrow w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600">
+                        <p>A Precapix é uma empresa dedicada à compra de precatórios federais, estaduais e municipais, criada com o propósito de tornar esse processo mais humano, seguro e justo. Seus fundadores perceberam a falta de um atendimento personalizado no setor e decidiram construir uma empresa que prioriza a escuta, a ética e a transparência.</p>
+                        <p class="mt-2">Com uma equipe especializada, a Precapix avalia cada caso com sensibilidade e conhecimento técnico, oferecendo propostas justas que respeitam as necessidades individuais dos clientes. A empresa entende que vender um precatório é uma decisão importante e, por isso, acompanha de perto todo o processo, oferecendo orientação clara e soluções sob medida.</p>
+                        <p class="mt-2">Mais do que buscar o melhor valor, a Precapix se dedica a oferecer a melhor experiência, baseada em confiança, agilidade e respeito.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-300 py-2">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800">
+                        <span>2 - Como saber o valor do meu precatório?</span>
+                        <svg class="faq-arrow w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600">
+                        <p>Na Precapix, nossa equipe de especialistas está à disposição para analisar seu precatório e informar, de forma clara e transparente, o valor que você pode receber na antecipação. Basta nos enviar as informações do seu título, e nós cuidamos do resto — avaliamos seu caso, tiramos todas as suas dúvidas e apresentamos uma proposta sem compromisso.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-gray-300 py-2">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800">
+                        <span>3 - Precisarei pagar algo para a Precapix ou para meu advogado?</span>
+                        <svg class="faq-arrow w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600">
+                        <p>Não. Na Precapix, você não paga nada após a negociação. O valor combinado é o que você receberá, sem taxas adicionais ou cobranças extras. Além disso, o valor dos honorários de seu advogado não faz parte da negociação. Toda a negociação é feita diretamente com você, de forma transparente e sem intermediários.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="border-b border-gray-300 py-2">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800">
+                        <span>4 - O processo é online ou presencial?</span>
+                        <svg class="faq-arrow w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600">
+                        <p>O processo de antecipação de precatórios pela Precapix pode ser feito de forma online ou presencial. Você escolhe o que for mais conveniente. Todas as etapas, desde a análise e envio dos documentos até a assinatura do contrato, podem ser realizadas 100% online com agilidade e segurança. Mas, se preferir, também oferecemos a opção de concluir o processo pessoalmente, com assinatura em cartório. Assim, garantimos mais flexibilidade e comodidade para você.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="border-b border-gray-300 py-2">
+                    <button class="faq-question w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800">
+                        <span>5 - Sou herdeiro de um precatório, posso vende-lo?</span>
+                        <svg class="faq-arrow w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600">
+                        <p>Sim. Caso o titular do precatório venha a falecer, seja durante o andamento do processo ou após a emissão do título, o direito ao crédito passa a integrar o espólio e é transferido aos herdeiros.</p>
+                        <p class="mt-2">Para que um herdeiro possa ceder esse crédito, é necessário que ele esteja formalmente reconhecido e habilitado no processo pelo tribunal competente, conforme as regras previstas no Código Civil e nas normas do tribunal responsável pelo pagamento.</p>
+                        <p class="mt-2">Uma vez concluída essa habilitação, o herdeiro passa a ser o novo titular do crédito, podendo utilizá-lo como desejar — inclusive realizar a venda do valor reconhecido.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -372,7 +448,7 @@
             
             startCarousel();
 
-            // Lógica da Seção Expansível
+            // Lógica da Seção Expansível "Quem Somos"
             const expandButton = document.getElementById('expand-button');
             const expandableContent = document.getElementById('expandable-content');
             const arrowIcon = document.getElementById('arrow-icon');
@@ -389,6 +465,24 @@
                     }
                 });
             }
+
+            // Lógica do Acordeão FAQ
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const arrow = button.querySelector('.faq-arrow');
+                    const isExpanded = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+                    if (isExpanded) {
+                        answer.style.maxHeight = '0px';
+                        arrow.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        arrow.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
         });
     </script>
 
