@@ -20,7 +20,7 @@
             font-family: 'Carbona';
             /* Substitua 'path/to/your/font.otf' pelo caminho correto da sua fonte */
             /* Exemplo: src: url('/fonts/Carbona-Black.otf') format('opentype'); */
-            src: url('/fonts/Carbona-Black.otf') format('opentype');
+            src: url('/fonts/Carbona-Regular.otf') format('opentype');
         }
 
         body {
@@ -53,25 +53,31 @@
             overflow: hidden;
             transition: max-height 0.5s ease-out;
         }
+        .navbar {
+            position: fixed; /* Pins the element to the viewport */
+            top: 0;          /* Positions it at the top of the viewport */
+            width: 100%;     /* Ensures it spans the full width */
+            z-index: 999;    /* Ensures it stays above other content */
+        }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 pt-24">
 
     <!-- Cabeçalho -->
-    <header class="bg-[#00a99d] shadow-lg z-20 relative">
+    <header class="bg-[#00a99d] shadow-lg z-20 fixed top-0 left-0 w-full">
         <nav class="container mx-auto px-6 py-1 flex justify-between items-center">
             <div>
                 <!-- Substitua pelo caminho da sua logotipo -->
                 <img src="img/Logotipo/Branco/logo_precapix_branco.png" alt="Logotipo Precapix" class="logo-header" >
             </div>
-            <div class="hidden md:flex items-center space-x-4 text-white font-semibold">
-                <a href="#porque-escolher" class="hover:text-gray-200 transition duration-300">Por que Vender?</a>
-                <span class="text-gray-300 opacity-50">|</span>
+            <div class="hidden md:flex items-center space-x-4 text-white font-face">
                 <a href="#como-funciona" class="hover:text-gray-200 transition duration-300">Como Funciona?</a>
                 <span class="text-gray-300 opacity-50">|</span>
-                <a href="#depoimentos" class="hover:text-gray-200 transition duration-300">Depoimentos</a>
+                <a href="#porque-escolher" class="hover:text-gray-200 transition duration-300">Por que Vender?</a>
                 <span class="text-gray-300 opacity-50">|</span>
                 <a href="#about" class="hover:text-gray-200 transition duration-300">Quem Somos</a>
+                <span class="text-gray-300 opacity-50">|</span>
+                <a href="#depoimentos" class="hover:text-gray-200 transition duration-300">Depoimentos</a>
             </div>
             <div>
                 <a href="https://wa.me/5511964858169" class="bg-[#c4d63b] text-black font-bold py-2 px-6 rounded-md hover:bg-opacity-90 transition duration-300 text-sm">Vender meu precatório</a>
@@ -80,7 +86,7 @@
     </header>
 
     <!-- Seção Principal (Carrossel Hero) -->
-    <main class="relative w-full overflow-hidden" style="height: 500px;">
+    <main class="relative w-full overflow-hidden " style="height: 500px;">
         <!-- Slides Container -->
         <div id="carousel-container" class="relative h-full">
             
@@ -89,7 +95,7 @@
                 <div class="container mx-auto px-6 flex items-center justify-between">
                     <div class="text-left text-black max-w-2xl">
                         <h1 class="font-carbona text-5xl font-black mb-4 leading-tight">Receba seu precatório na velocidade de um pix</h1>
-                        <p class="mb-6">A PRECAPIX compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
+                        <p class="mb-6">A <span class="font-bold">PRECAPIX</span> compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
                         <a href="https://wa.me/5511964858169" target="_blank" class="bg-[#00a99d] text-white font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300">Quero Vender Meu Precatório Agora!</a>
                         <p class="text-sm mt-4">Fale com um Especialista no WhatsApp!</p>
                     </div>
@@ -107,7 +113,7 @@
                 <div class="container mx-auto px-6 h-full flex items-center justify-between relative z-10">
                     <div class="text-left text-white max-w-2xl">
                         <h1 class="font-carbona text-5xl font-black mb-4 leading-tight">Receba seu precatório na velocidade de um pix</h1>
-                        <p class="mb-6">A PRECAPIX compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
+                        <p class="mb-6">A <span class="font-bold">PRECAPIX</span> compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
                         <a href="https://wa.me/5511964858169" target="_blank" class="bg-[#c4d63b] text-black font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300">Quero Vender Meu Precatório Agora!</a>
                         <p class="text-sm mt-4">Fale com um Especialista no WhatsApp!</p>
                     </div>
@@ -125,7 +131,7 @@
                 <div class="container mx-auto px-6 h-full flex items-center justify-between relative z-10">
                     <div class="text-left text-white max-w-2xl">
                         <h1 class="font-carbona text-5xl font-black mb-4 leading-tight">Receba seu precatório na velocidade de um pix</h1>
-                        <p class="mb-6">A PRECAPIX compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
+                        <p class="mb-6">A <span class="font-bold">PRECAPIX</span> compra seu precatório com agilidade, segurança e sem burocracia. Receba via PIX ou transferência e diga adeus à espera da justiça.</p>
                         <a href="https://wa.me/5511964858169" target="_blank" class="bg-[#c4d63b] text-black font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300">Quero Vender Meu Precatório Agora!</a>
                         <p class="text-sm mt-4">Fale com um Especialista no WhatsApp!</p>
                     </div>
@@ -147,7 +153,7 @@
     </main>
 
     <!-- Seção Como Funciona -->
-    <section id="como-funciona" class="py-20 bg-white">
+    <section id="como-funciona" class="py-20 bg-white scroll-mt-24">
         <div class="container mx-auto px-6 text-center">
             <h2 class="font-carbona text-3xl font-bold text-gray-800 mb-16">Como Funciona a Venda do Seu Precatório?</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -193,10 +199,9 @@
                 </div>
 
             </div>
-            <div class="mt-16 flex flex-col items-center space-y-4">
-                <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Logo X" class="h-20 w-20">
+            <div class="mt-16 flex flex-col items-center space-y-0">
+                <img src="img/Logomarca/Colorido/logo_colorido.png" alt="Logo X" class="h-24 w-24">
                 <a href="https://wa.me/5511964858169" target="_blank" class="inline-flex items-center text-gray-700 font-semibold hover:text-blue-600 transition duration-300">
-                    
                     Fale agora com um especialista via WhatsApp
                 </a>
             </div>
@@ -204,9 +209,9 @@
     </section>
 
     <!-- Seção Por que Escolher a Precapix? -->
-    <section id="porque-escolher" class="py-20 bg-[#00a99d]">
+    <section id="porque-escolher" class="py-20 bg-[#00a99d] scroll-mt-24">
         <div class="container mx-auto px-6 text-center text-white">
-            <h2 class="font-carbona text-4xl font-bold mb-16">Por que escolher a PRECIPIX?</h2>
+            <h2 class="font-carbona text-4xl font-bold mb-16">Por que escolher a PRECAPIX?</h2>
             <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
                 
                 <!-- Item 1 -->
@@ -253,21 +258,21 @@
     </section>
     
     <!-- Seção Quem Somos -->
-    <section id="about" class="bg-[#c4d63b] py-20 overflow-hidden relative">
+    <section id="about" class="bg-[#c4d63b] py-20 overflow-hidden relative scroll-mt-24">
         <!-- Elementos decorativos -->
         <div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/4">
             <!-- <div class="w-96 h-96 bg-black transform rotate-45"></div> -->
-            <img src="img/Logomarca/Preto/logo_preto.png" alt="Logo Precipix" class="h-55">
+            <img src="img/Logomarca/Preto/logo_preto.png" alt="Logo Precapix" class="h-55">
         </div>
         <div class="absolute top-5 left-16 p-12 z-10">
-            <img src="img/Logotipo/Branco/logo_precapix_branco.png" alt="Logo Precipix" class="h-16">
+            <img src="img/Logotipo/Branco/logo_precapix_branco.png" alt="Logo Precapix" class="h-16">
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-wrap items-center">
-                <div class="w-full md:w-1/2 text-white">
-                    <h2 class="font-carbona text-5xl font-black mb-2">Quem somos?</h2>
-                    <button id="expand-button" class="text-lg font-semibold flex items-center transition-transform duration-300">
+            <div class="flex flex-wrap items-center ml-14">
+                <div class="w-full md:w-1/2">
+                    <h2 class="font-carbona text-5xl font-black mb-2  text-white">Quem somos?</h2>
+                    <button id="expand-button" class="text-lg font-semibold flex items-center transition-transform duration-300  text-black">
                         Descubra mais!
                         <svg id="arrow-icon" class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -293,7 +298,7 @@
     </section>
 
     <!-- Seção Depoimentos -->
-    <section id="depoimentos" class="py-20 bg-[#0f3b38]">
+    <section id="depoimentos" class="py-20 bg-[#003742] scroll-mt-24">
         <div class="container mx-auto px-6 text-center">
             <h2 class="font-carbona text-5xl font-bold text-white mb-16">Depoimentos de nosso clientes</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -425,7 +430,7 @@
                 </form>
             </div>
             <div class="text-white">
-                <h2 class="font-carbona text-6xl font-black leading-tight">Fale com um de nossos <span class="text-[#5c4b8c]">especialistas</span> para consultar ou antecipar o seu precatório</h2>
+                <h2 class="font-carbona text-6xl font-black leading-none">Fale com um de nossos <span class="text-[#5c4b8c]">especialistas</span> para consultar ou antecipar o seu precatório</h2>
             </div>
         </div>
     </section>
@@ -437,8 +442,8 @@
                 <img src="img/Logotipo/Branco/logo_precapix_branco.png" alt="Logotipo Precapix" class="logo-header">
                 <div>
                     <p class="font-bold">PRECAPIX</p>
-                    <p class="text-sm">R. Voluntários da Pátria, 2468 - CJ 147 - Santana - São Paulo</p>
-                    <p class="text-xs mt-2">Copyright © 2025 Precapix. Todos os direitos reservados.</p>
+                    <p class="text-lg">R. Voluntários da Pátria, 2468 - CJ 147 - Santana - São Paulo</p>
+                    <p class="text-xs mt-0">Copyright © 2025 Precapix. Todos os direitos reservados.</p>
                 </div>
             </div>
             <div class="flex space-x-4 mt-4 md:mt-0">
